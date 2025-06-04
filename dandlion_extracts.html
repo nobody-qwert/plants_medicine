@@ -2,69 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dandelion Extraction Methods</title>
   <style>
+    :root {
+      --primary-color: #4a7c59;
+      --secondary-color: #f4d35e;
+      --text-color: #333;
+      --light-bg: #f9f9f7;
+      --accent-color: #ee964b;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
       line-height: 1.5;
-      color: #333;
+      color: var(--text-color);
+      background-color: var(--light-bg);
     }
-    h1 {
-      font-size: 1.6em;
-      margin-bottom: 10px;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    nav {
-      margin-bottom: 20px;
+    
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    nav a {
-      margin-right: 15px;
-      color: #0066cc;
-      text-decoration: none;
+    
+    nav.main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
     }
+    
+    .nav-links li {
+      margin-left: 1.5rem;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .content-area {
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+    
+    nav.section-nav {
+      margin: 20px 0;
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    nav.section-nav a {
+      margin-right: 15px;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav.section-nav a:hover {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+    
     section {
       margin-top: 40px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
+    
     section h2 {
-      font-size: 1.3em;
-      margin-bottom: 8px;
+      font-size: 1.4em;
+      margin-bottom: 10px;
       border-bottom: 1px solid #ccc;
-      padding-bottom: 4px;
+      padding-bottom: 8px;
+      color: var(--primary-color);
     }
+    
     .metrics {
       font-size: 0.95em;
-      margin-top: 6px;
-      margin-bottom: 12px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
     }
+    
     .metrics span {
       display: inline-block;
-      margin-right: 12px;
+      margin-right: 15px;
     }
+    
     .content p {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
+    
+    .back-to-studies {
+      display: inline-block;
+      margin: 20px 0;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .back-to-studies:hover {
+      background-color: var(--accent-color);
+    }
+    
     footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <nav class="main-nav">
+        <div class="logo">Plant Medicine</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dandelion.html">Dandelion</a></li>
+          <li><a href="dandlion_extracts.html">Extraction Methods</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <h1>Dandelion Extraction Methods</h1>
+  <div class="container content-area">
+    <h1>Dandelion Extraction Methods</h1>
+    <a href="dandelion.html" class="back-to-studies">Back to Dandelion Studies</a>
 
-  <nav>
-    <a href="#tincture">Alcohol Tincture</a>
-    <a href="#decoction">Hot Water Decoction</a>
-    <a href="#infusion">Cold Infusion</a>
-    <a href="#drypowder">Dry Powder</a>
-  </nav>
+    <nav class="section-nav">
+      <a href="#tincture">Alcohol Tincture</a>
+      <a href="#decoction">Hot Water Decoction</a>
+      <a href="#infusion">Cold Infusion</a>
+      <a href="#drypowder">Dry Powder</a>
+    </nav>
 
   <section id="tincture">
     <h2>1. Alcohol Tincture</h2>
@@ -229,15 +356,16 @@
   </section>
 
   <footer>
-    <p><strong>Quick Reference Metrics:</strong></p>
-    <ul>
-      <li><strong>Alcohol Tincture:</strong> Duration 2–6 weeks | Efficacy High | Shelf-life 1–2 years</li>
-      <li><strong>Hot Water Decoction:</strong> Duration 20–30 min (roots), 10–15 min (leaves) | Efficacy Moderate | Use within 24 hrs</li>
-      <li><strong>Cold Infusion:</strong> Duration 8–12 hrs | Efficacy Low-Moderate | Use within 48 hrs</li>
-      <li><strong>Dry Powder:</strong> Drying 1–3 days | Efficacy High | Shelf-life 1–2 years</li>
-    </ul>
-    <p><em>&copy; 2025 Dandelion Herbal Methods</em></p>
+    <div class="container">
+      <p><strong>Quick Reference Metrics:</strong></p>
+      <ul>
+        <li><strong>Alcohol Tincture:</strong> Duration 2–6 weeks | Efficacy High | Shelf-life 1–2 years</li>
+        <li><strong>Hot Water Decoction:</strong> Duration 20–30 min (roots), 10–15 min (leaves) | Efficacy Moderate | Use within 24 hrs</li>
+        <li><strong>Cold Infusion:</strong> Duration 8–12 hrs | Efficacy Low-Moderate | Use within 48 hrs</li>
+        <li><strong>Dry Powder:</strong> Drying 1–3 days | Efficacy High | Shelf-life 1–2 years</li>
+      </ul>
+      <p>&copy; 2025 Plant Medicine. All rights reserved.</p>
+    </div>
   </footer>
-
 </body>
 </html>

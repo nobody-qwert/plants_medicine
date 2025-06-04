@@ -2,36 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dandelion Studies Summary</title>
   <style>
+    :root {
+      --primary-color: #4a7c59;
+      --secondary-color: #f4d35e;
+      --text-color: #333;
+      --light-bg: #f9f9f7;
+      --accent-color: #ee964b;
+    }
+    
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;
       line-height: 1.5;
-      color: #333;
+      color: var(--text-color);
+      background-color: var(--light-bg);
     }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 1.5rem;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .content-area {
+      padding: 20px;
+    }
+    
     h1 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: var(--primary-color);
     }
+    
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 15px;
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
+    
     th, td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 10px;
       vertical-align: top;
       text-align: left;
     }
+    
     th {
       background-color: #f4f4f4;
       font-weight: bold;
     }
+    
     tr:nth-child(even) {
       background-color: #fafafa;
     }
+    
     code {
       white-space: pre-wrap;
       font-family: monospace;
@@ -39,24 +106,78 @@
       padding: 2px 4px;
       border-radius: 4px;
     }
+    
     .references {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 0.9em;
+      padding: 15px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
+    
     .references h2 {
-      font-size: 1.2em;
-      margin-bottom: 5px;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: var(--primary-color);
     }
+    
     .references ul {
       padding-left: 20px;
     }
+    
     .references li {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .extraction-link {
+      display: inline-block;
+      margin: 20px 0;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .extraction-link:hover {
+      background-color: var(--accent-color);
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Dandelion Studies Summary</h1>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Plant Medicine</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dandelion.html">Dandelion</a></li>
+          <li><a href="dandlion_extracts.html">Extraction Methods</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container content-area">
+    <h1>Dandelion Studies Summary</h1>
+    <a href="dandlion_extracts.html" class="extraction-link">View Dandelion Extraction Methods</a>
   <table>
     <thead>
       <tr>
@@ -219,5 +340,11 @@
       <li>Clare, B. A., Conroy, R. S., &amp; Spelman, K. (2009). The Diuretic Effect in Human Subjects of an Extract of Taraxacum officinale Folium over a Single Day. Journal of Alternative and Complementary Medicine, 15(8), 929–934. <a href="https://doi.org/10.1089/acm.2008.0152" target="_blank">https://doi.org/10.1089/acm.2008.0152</a></li>
     </ul>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Plant Medicine. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
