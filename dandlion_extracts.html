@@ -13,6 +13,8 @@
       --accent-color: #ee964b;
     }
     
+    /* Mobile-first approach */
+    
     * {
       margin: 0;
       padding: 0;
@@ -163,7 +165,83 @@
     
     @media (max-width: 768px) {
       .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 100;
+      }
+      
+      .nav-links li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav-links a {
+        display: block;
+        padding: 0.5rem;
+      }
+      
+      .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links:not(.active) {
         display: none;
+      }
+      
+      .back-to-studies {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 15px auto;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      
+      nav.section-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+      
+      nav.section-nav a {
+        margin: 5px 0;
+        text-align: center;
+      }
+      
+      section {
+        padding: 15px;
+      }
+      
+      section h2 {
+        font-size: 1.2rem;
+      }
+      
+      .metrics span {
+        display: block;
+        margin: 5px 0;
+      }
+      
+      ol li {
+        margin-bottom: 10px;
       }
     }
   </style>
@@ -173,7 +251,8 @@
     <div class="container">
       <nav class="main-nav">
         <div class="logo">Plant Medicine</div>
-        <ul class="nav-links">
+        <button class="mobile-menu-toggle" id="menuToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="dandelion.html">Dandelion</a></li>
           <li><a href="dandlion_extracts.html">Extraction Methods</a></li>
@@ -367,5 +446,25 @@
       <p>&copy; 2025 Plant Medicine. All rights reserved.</p>
     </div>
   </footer>
+  
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Close menu when a link is clicked
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
